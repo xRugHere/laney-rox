@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./../app/app.css";
 import "@aws-amplify/ui-react/styles.css";
 import { showPage } from "./../app/page-functions";
@@ -24,17 +24,36 @@ export default function App() {
     };
   }, []);
 
+  const [selectedButton, setSelectedButton] = useState("personal");
+
+  const handleButtonClick = (page: string) => {
+    setSelectedButton(page); // Update the selected button
+    showPage(page); // Call the showPage function
+  };
+
   return (
     <main>
       <div id="topbar">
         <h1 id="text">Laney's Portfolio</h1>
         <div id="selection">
-          <button id="PageContemporary" onClick={() => showPage("contemporary")}>
+          <div
+            id="PageContemporary"
+            className={`button ${
+              selectedButton === "contemporary" ? "selected" : ""
+            }`}
+            onClick={() => handleButtonClick("contemporary")}
+          >
             Observational
-          </button>
-          <button id="PagePersonal" onClick={() => showPage("personal")}>
+          </div>
+          <div
+            id="PagePersonal"
+            className={`button ${
+              selectedButton === "personal" ? "selected" : ""
+            }`}
+            onClick={() => handleButtonClick("personal")}
+          >
             Personal
-          </button>
+          </div>
         </div>
         <div id="gallery"></div>
       </div>

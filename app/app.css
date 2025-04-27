@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #fff6e4; /* Off-white background */
+    background-color: #f0e7d6;
     display: flex;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     flex-direction: column;
@@ -44,7 +44,8 @@ body {
     background-color: #fff6e4;
     color: rgb(160, 160, 160);
     padding: 40px 40px;
-    margin: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
   }
 
   #topbar #text {
@@ -60,6 +61,7 @@ body {
     letter-spacing: .23em;
     text-transform: uppercase;
     padding: 0 20px;
+    z-index: 1000;
   }
 
   #selection {
@@ -69,9 +71,13 @@ body {
     text-align: center;
     margin: 10px 0;
     padding: 0 0 20px 0;
+    z-index: 1000;
   }
   
-  #selection button{
+  #selection div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-family: Arial,sans-serif;
     border-color: #fff6e4;
@@ -89,18 +95,63 @@ body {
     line-height: 1.1em;
     letter-spacing: .23em;
     text-transform: uppercase;
-    padding: 0 20px;
     transition: background-color .2s ease-out;
-    align-self: center;
+    color: rgb(109, 109, 109);
+    z-index: 1000;
+    outline: none;
+    box-shadow: 4px 4px 4px rgba(206, 203, 170, 0.6);
+    padding: 0 20px;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease;
+  } 
+
+  /* Selected button styles */
+  #selection div.selected {
+    box-shadow: 10px 10px 10px rgba(206, 203, 170, 0.6) inset;
+    background-color: #f8ecd4; /* Optional: Change background color */
+  }
+
+  /* #PageContemporary {
+    outline: none;
+    box-shadow: 4px 4px 4px rgba(206, 203, 170, 0.6);
+    padding: 0 20px;
+  }
+
+  #PagePersonal {
+    outline: none;
+    box-shadow: 10px 10px 10px rgba(206, 203, 170, 0.6) inset;
+    padding: 0 10px;
+  } */
+
+
+  #fade1 {
+    height: 10px;
+    background: linear-gradient(180deg,rgb(255, 253, 232, .6) 10%, rgba(228, 214, 187, 0) 100%);
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 6vh;
+    z-index: 2;
+  }
+
+  #fade2 {
+    height: 10px;
+    background: linear-gradient(0deg,rgb(255, 253, 232, .6) 10%, rgba(228, 214, 187, 0) 100%);
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    height: 6vh;
+    z-index: 2;
   }
   
-  #selection button:hover{
-    background-color: #e4d6bb;
+  #selection div:hover{
+    background-color: #ecdec2;
     box-shadow: 0;
-  
+    z-index: 1000;
   }
   
-  #selection button:active{
-    background-color: #e4d6bb;
+  #selection div:active{
+    background-color: #ecdec2;
   }
   
