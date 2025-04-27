@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./../app/app.css";
 import "@aws-amplify/ui-react/styles.css";
-import { showPage } from "./../app/page-functions";
+import { showPage, contemporary } from "./../app/page-functions";
 
 export default function App() {
   useEffect(() => {
@@ -37,7 +37,6 @@ export default function App() {
         <h1 id="text">Laney's Portfolio</h1>
         <div id="selection">
           <div
-            id="PageContemporary"
             className={`button ${
               selectedButton === "contemporary" ? "selected" : ""
             }`}
@@ -46,7 +45,6 @@ export default function App() {
             Observational
           </div>
           <div
-            id="PagePersonal"
             className={`button ${
               selectedButton === "personal" ? "selected" : ""
             }`}
@@ -55,7 +53,7 @@ export default function App() {
             Personal
           </div>
         </div>
-        <div id="gallery"></div>
+        <div id="gallery">{contemporary}</div>
       </div>
     </main>
   );
