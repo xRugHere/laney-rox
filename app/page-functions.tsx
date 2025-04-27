@@ -2,26 +2,6 @@ import ReactDOM from "react-dom";
 
 const personal =
 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '20px' }}>
-<div id="image-cell">
-        <img src="/assets/chickenJockey.jpg" alt="Project 1" style={{ width: '100%', maxHeight: '500px', margin: 'auto'}} />
-        <p>CHICKEN JOCKEY</p>
-        <p>CHICKEN JOCKEY, January 2025</p>
-    </div>
-    <div id="image-cell">
-        <img src="/assets/chickenJockey.jpg" alt="Project 1" style={{ width: '100%', maxHeight: '500px', margin: 'auto'}} />
-        <p>CHICKEN JOCKEY</p>
-        <p>CHICKEN JOCKEY, January 2025</p>
-    </div>
-    <div id="image-cell">
-        <img src="/assets/chickenJockey.jpg" alt="Project 1" style={{ width: '100%', maxHeight: '500px', margin: 'auto'}} />
-        <p>CHICKEN JOCKEY</p>
-        <p>CHICKEN JOCKEY, January 2025</p>
-    </div>
-    <div id="image-cell">
-        <img src="/assets/chickenJockey.jpg" alt="Project 1" style={{ width: '100%', maxHeight: '500px', margin: 'auto'}} />
-        <p>CHICKEN JOCKEY</p>
-        <p>CHICKEN JOCKEY, January 2025</p>
-    </div>
     <div id="image-cell">
         <img src="/assets/project1.jpeg" alt="Project 1" style={{ width: '100%', maxHeight: '500px', margin: 'auto'}} />
         <p>Hooked Adolescence</p>
